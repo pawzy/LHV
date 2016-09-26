@@ -9,6 +9,9 @@ body {
     font-size: 90px;
     padding-bottom: 20px;
 }
+body h2 {
+    margin-bottom: 10px;
+}
 .featurette {
     margin-left: -15px;
 }
@@ -24,11 +27,14 @@ body {
 .search-result {
     padding-top: 20px;
 }
+.lists h2 {
+    margin-bottom: 30px;
+}
 @media (max-width: 767px) {
     .headline h1 {
         font-size: 60px;
     }
     .featurette {
-        margin: 20px 0;
+        margin: 20px 0 20px -15px;
     }
 }

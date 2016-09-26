@@ -23,8 +23,53 @@
 
     <hr class="featurette-divider">
 
+    <div class="featurette col-sm-12">
+        <h2>What works: </h2>
+        <ul>
+            <li>Detects following cases:
+                <ul>
+                    <li>"Osama Bin Laden"</li>
+                    <li>"Bin Laden, Osama"</li>
+                    <li>"Laden Osama Bin"</li>
+                    <li>"to the osama bin laden"</li>
+                    <li>"osama and bin laden"</li>
+                    <li>"osama,,bin,,,,laden"</li>
+                    <li><strong>Additionally: </strong>"Bin Laden" and other partial searches</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>How to use: </h2>
+        <ol>
+            <li>Insert name into the field</li>
+            <li>Check for exact matches</li>
+            <li>Check for matches with noise words in a list below</li>
+            <li>Check for partial matches</li>
+            <li>Check for names that definitely are not in the list</li>
+        </ol>
+
+        <h2>What was used: </h2>
+        <ul>
+            <li>Javascript</li>
+            <li>Jquery</li>
+            <li>Bootstrap</li>
+            <li><a href="https://startbootstrap.com/template-overviews/one-page-wonder/">Bootstrap One Page Wonder
+                Theme</a></li>
+            <li>Random generated list of names</li>
+            <li><a href="http://xpo6.com/list-of-english-stop-words/">Noise words</a></li>
+            <li>My friend google</li>
+            <li>Binary search for name search when looking for exact matches</li>
+            <li>Regex search (for loop over all elements) for partial matches</li>
+        </ul>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <hr class="featurette-divider">
+
     <!-- First Featurette -->
     <div class="featurette col-sm-12">
+        <h2>Blacklist Name Matching</h2>
         <div>
             <div class="input-group form-group">
                 <label for="nameToCheck">Searchable name</label>
@@ -41,21 +86,26 @@
 
     <hr class="featurette-divider">
 
-    <div class="featurette col-sm-6">
-        <a class="btn btn-primary" data-toggle="collapse" href="#openNamesList" aria-expanded="false" aria-controls="openNamesList">
-            List of names
-        </a>
-        <div class="collapse nameslist js-names-list" id="openNamesList">
-            <ul></ul>
+    <div class="lists">
+        <h2>Lists used: </h2>
+        <div class="featurette col-sm-6">
+            <a class="btn btn-primary" data-toggle="collapse" href="#openNamesList" aria-expanded="false"
+               aria-controls="openNamesList">
+                List of names
+            </a>
+            <div class="collapse nameslist js-names-list" id="openNamesList">
+                <ul></ul>
+            </div>
         </div>
-    </div>
 
-    <div class="featurette col-sm-6">
-        <a class="btn btn-primary" data-toggle="collapse" href="#openNoisewordsList" aria-expanded="false" aria-controls="openNamesList">
-            List of noisewords
-        </a>
-        <div class="collapse noisewords js-noisewords-list" id="openNoisewordsList">
-            <ul></ul>
+        <div class="featurette col-sm-6">
+            <a class="btn btn-primary" data-toggle="collapse" href="#openNoisewordsList" aria-expanded="false"
+               aria-controls="openNamesList">
+                List of noisewords
+            </a>
+            <div class="collapse noisewords js-noisewords-list" id="openNoisewordsList">
+                <ul></ul>
+            </div>
         </div>
     </div>
 
@@ -66,8 +116,22 @@
     <div class="featurette col-sm-12">
         <h2>Possible issues:</h2>
         <ul>
-            <li>Name is not returned in its original order that it's read from file (Firstname-middlename-lastname).</li>
-            <li>Partial search may return multiple names (check Donovan Brennan). Which is what defines partial search probably.</li>
+            <li>Name is not returned in its original order that it's read from file (Firstname-middlename-lastname).
+            </li>
+            <li>Partial search may return multiple names (check Donovan Brennan). Which is what defines partial search
+                probably. So not exaxtly an issue.
+            </li>
+            <li>Could have used javascript objects instead of strings. The program would be more expandable and possibly
+                a match could be returned in its original form. Didn't think about it when I started writing the
+                program.
+            </li>
+            <li>
+                Right now find matches to one word searches which may not be a good idea in real world cases as it
+                returns too many possible results
+            </li>
+            <li>There are other characters that should/could have been checked for additional to "," ("; : !" etc). Not
+                hard to implement but seemed unnecessary.
+            </li>
 
         </ul>
     </div>
