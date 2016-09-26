@@ -1,0 +1,74 @@
+/*
+ * Start Bootstrap - One Page Wonder (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+.header-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: url('http://placehold.it/1900x500') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.headline {
+    padding: 120px 0;
+}
+
+.headline h1 {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette {
+    overflow: hidden;
+}
+footer {
+    margin: 50px 0;
+}
+@media(max-width:1200px) {
+    .featurette-divider {
+        margin: 50px 0;
+    }
+}
+@media(max-width:991px) {
+    .featurette-divider {
+        margin: 40px 0;
+    }
+}
+@media(max-width:768px) {
+    .container {
+        margin: 0 15px;
+    }
+
+    .featurette-divider {
+        margin: 40px 0;
+    }
+}
+@media(max-width:668px) {
+    .headline h1 {
+        font-size: 70px;
+    }
+    .featurette-divider {
+        margin: 30px 0;
+    }
+}
+@media(max-width:640px) {
+    .headline {
+        padding: 75px 0 25px 0;
+    }
+    .headline h1 {
+        font-size: 60px;
+    }
+}
+@media(max-width:375px) {
+    .featurette-divider {
+        margin: 10px 0;
+    }
+}
